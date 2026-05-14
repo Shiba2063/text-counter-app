@@ -41,15 +41,14 @@ export default function Navbar(props) {
 
             {/* FIXED DROPDOWN */}
             <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                role="button"
+              <button
+                className="nav-link dropdown-toggle btn btn-link"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{ marginLeft: "40px", cursor: "pointer" }}
+                style={{ marginLeft: "40px", textDecoration: "none" }}
               >
                 Settings
-              </span>
+              </button>
 
               <ul className="dropdown-menu">
                 <li>
@@ -72,7 +71,7 @@ export default function Navbar(props) {
             </li>
 
             <li className="nav-item" style={{ marginLeft: "40px" }}>
-              <span className="nav-link disabled">
+              <span className="nav-link disabled" aria-disabled="true">
                 Disabled
               </span>
             </li>
@@ -123,4 +122,3 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   title: "Text Counter"
 }
-
